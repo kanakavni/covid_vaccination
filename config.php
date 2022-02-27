@@ -1,7 +1,7 @@
 <?php
 
 $dbhost='localhost';
-$dbname='websitedb';
+$dbname='covid_vaccination';
 $dbusername='root';
 $dbpass='';
 
