@@ -35,7 +35,7 @@
           <a class="nav-link active" href="contact.php">Contact</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link active" href="admin.php">Admin</a>
+          <a class="nav-link active" href="admin/admin_login.php">Admin</a>
         </li>
       </ul>
      
