@@ -19,15 +19,17 @@
         function call_php() {
             var emailAddress = document.getElementById("emailAddress").value;
             alert(emailAddress);
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    // MANAGE THE RESPONSE
-                    var response = this.responseText;
+            $.ajax({
+                url: 'sendlink.php',
+                type: 'POST',
+                success: function(result) {
+                    console.log(result); // Here, you need to use response by PHP file.
+                },
+                error: function() {
+                    console.log('error');
                 }
-            }
-            xmlhttp.open("GET", "sendlink.php?email=" + emailAddress, true);
-            xmlhttp.send();
+
+            });
         }
     </script>
 
@@ -133,7 +135,7 @@
                     <h2 class="text-white mb-5">Submit to Register!</h2>
 
                     <!-- to get an API token!-->
-                    <form  class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <form class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN">
                         <!-- Email address input-->
                         <div class="row input-group-newsletter">
                             <div class="col"><input class="form-control" id="emailAddress" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
