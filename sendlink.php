@@ -1,7 +1,6 @@
 <?php
-echo "Hello Wrold";
-// echo "<script>alert('hello');</script>";
-//  if(isset($_GET['email'])){
-//      echo "<script>alert('".$_GET['email']."');</script>";
-//  }
+echo "<script>alert('hello');</script>";
+ if(isset($_POST['email'])){
+     echo "<script>alert('".$_POST['email']."');</script>";
+ }
 ?>
