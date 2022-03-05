@@ -27,7 +27,7 @@
             xmlhttp.open("GET", "sendlink.php?email=" + emailAddress, true);
             xmlhttp.send();
         }
-        }
+        
     </script>
 
 </head>
